@@ -6,12 +6,33 @@ jobs:
   run-shell-command: 
     runs-on: ubuntu-latest
     steps: 
-      - name: eccho a string
+      - name: echo a string
         run: echo "Hello World"
       - name: multiline script
         run: | 
           node -v
           npm -v
+      - name: python command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
+  run-windows-command: 
+    runs-on: windows-latest
+    steps: 
+      - name: Get Directory in Powershell
+        run: Get-Location
+      - name: Get Directory in Bash
+        run: pwd
+        shell: bash
+      - name: echo a string
+        run: echo "Hello World"
+        shell: bash
+      - name: multiline script
+        run: | 
+          node -v
+          npm -v
+        shell: bash
       - name: python command
         run: |
           import platform
