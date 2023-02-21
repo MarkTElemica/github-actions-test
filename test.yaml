@@ -1,0 +1,14 @@
+name: mark
+age: 51
+address: '4 Ayjay Close, Aldershot'
+active: true
+keypairs:
+    -
+        key: herbert
+        value: 45
+    -
+        key: horace
+        value: 19
+key:
+    key1: fred
+    key2: ethel
